@@ -1193,3 +1193,62 @@ footer img { width: 72px; height: auto; image-rendering: pixelated; }
     aspect-ratio: 4 / 3;
   }
 }
+/* DOCUMENTOS Y ANEXOS */
+.documentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
+  margin: 1rem 0 2rem;
+}
+.documento {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  background: var(--blanco);
+  color: var(--tinta);
+  border: 3px solid var(--azul);
+  box-shadow: var(--sombra);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.documento:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--azul);
+  color: var(--tinta);
+}
+
+/* Etiqueta de archivo con esquina doblada */
+.d-tipo {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 68px;
+  display: grid;
+  place-items: end center;
+  padding-bottom: 0.55rem;
+  font: 0.62rem "Press Start 2P", monospace;
+  color: var(--oro);
+  border: 3px solid var(--oro);
+}
+.d-tipo.doc {
+  color: var(--fora-crema);
+  background: linear-gradient(225deg, var(--blanco) 0 14px, transparent 14px), var(--fora-oxido);
+}
+.d-tipo.anexo {
+  background: linear-gradient(225deg, var(--blanco) 0 14px, transparent 14px), var(--azul);
+}
+
+.d-texto strong { display: block; color: var(--azul); line-height: 1.3; }
+.d-texto small  { display: block; margin-top: 0.2rem; font-size: 0.82rem; color: var(--azul-2); }
+
+/* Pregunta de investigación como cita */
+.cita {
+  max-width: none;
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--fora-crema);
+  border: 3px solid var(--azul);
+  border-left: 8px solid var(--fora-oxido);
+  box-shadow: 3px 3px 0 var(--azul-2);
+  font-style: italic;
+  font-weight: 600;
+}
